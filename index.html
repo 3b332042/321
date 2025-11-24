@@ -1,114 +1,134 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>互動式網頁</title>
-    <style>
-        body{
-            margin: 0;
-            font-family: "Microsoft JhengHei", system-ui, sans-serif;
-            background-color: #ffb6c6;   /* 整體粉紅底色 */
-        }
+<meta charset="UTF-8">
+<title>DIO jojo</title>
 
-        /* 上方大標題區 */
-        header{
-            background-color: #ffc8d6;
-            padding: 30px 0;
-            text-align: center;
-        }
-        header h1{
-            margin: 0;
-            font-size: 40px;
-            letter-spacing: 4px;
-        }
+<style>
+    /* ★ 整體背景深粉色 */
+    body {
+        background-color: #ffabd3;   /* 深粉 */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
 
-        /* 連結列 */
-        nav{
-            text-align: center;
-            margin: 15px 0 25px 0;
-        }
-        nav a{
-            margin: 0 15px;
-            text-decoration: none;
-            color: #5b2444;
-            font-weight: bold;
-        }
-        nav a:hover{
-            text-decoration: underline;
-        }
+    /* ★ 粉紅按鈕 */
+    .pink-btn {
+        width: 90%;
+        max-width: 700px;
+        background-color: #ffd6df;   /* 淺粉 */
+        border-radius: 20px;
+        padding: 15px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin: 30px auto;
+        border: 2px solid #f3b6c6;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-        /* 內容區塊 */
-        .container{
-            width: 90%;
-            max-width: 900px;
-            margin: 0 auto 40px auto;
-        }
+    .pink-btn:hover {
+        background-color: #ff6b6b;
+        color: white;
+        border-color: #ff3b3b;
+    }
 
-        .flower{
-            border: 3px dotted #000;
-            padding: 15px;
-            margin-bottom: 40px;
-            background-color: #ffd9e6;       /* 預設底色 */
-            transition: background-color .3s;
-        }
-        /* 滑鼠移過去會改變背景顏色：互動效果 */
-        .flower:hover{
-            background-color: #ffe88a;
-        }
+    /* ★ 連結區塊 */
+    .links {
+        text-align: center;
+        margin-top: -10px;
+    }
 
-        .flower h2{
-            margin-top: 0;
-        }
+    .links a {
+        margin: 0 10px;
+        text-decoration: underline;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        transition: 0.2s;
+    }
 
-        .flower img{
-            width: 100%;
-            max-width: 350px;
-            display: block;
-        }
+    .links a:hover {
+        color: #4da3ff;
+    }
 
-        .text{
-            margin-top: 10px;
-            line-height: 1.8;
-        }
-    </style>
+    /* ★ 角色排版 */
+    .container {
+        width: 100%;
+        display: flex;
+        margin: 40px 0;
+        padding: 0 20px;
+    }
+
+    .img-box {
+        width: 250px;
+        min-height: 350px;
+        border: 2px dotted black;
+        margin-right: 20px;
+        background-color: #ffccd6;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-top: 10px;
+        color: #000;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-right: 30px;
+    }
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>互動式網頁</h1>
-    </header>
+<!-- 上方按鈕 -->
+<div class="pink-btn">互動式網頁</div>
 
-    <nav>
-        <a href="#plumeria">雞蛋花</a>
-        <a href="#hydrangea">繡球花</a>
-    </nav>
+<div class="links">
+    <a href="#">雞蛋花</a>
+    <a href="#">緬梔花</a>
+</div>
 
-    <div class="container">
-
-        <!-- 雞蛋花區塊 -->
-        <section id="plumeria" class="flower">
-            <h2>雞蛋花</h2>
-            <img src="eggflower.jpg" alt="雞蛋花照片">
-            <!-- 圖片請改成你自己檔名 -->
-            <p class="text">
-                雞蛋花是我非常喜歡的一種花，花瓣外白內黃，像半熟蛋一樣可愛。
-                每次看到雞蛋花就會想到夏天的味道，心情也會變得很放鬆。<br>
-                把滑鼠移到這個區塊上，可以看到背景顏色跟著改變，代表我看到雞蛋花時心情的轉變。
-            </p>
-        </section>
-
-        <!-- 繡球花區塊 -->
-        <section id="hydrangea" class="flower">
-            <h2>繡球花</h2>
-            <img src="hydrangea.jpg" alt="繡球花照片">
-            <p class="text">
-                繡球花一整球開滿小花，不同顏色代表不同的土壤與心情。
-                我喜歡在雨天走過繡球花步道，感覺世界變得很溫柔。<br>
-                一樣把滑鼠移過來，背景會變色，模擬繡球花顏色變化的感覺。
-            </p>
-        </section>
-
+<!-- ===== 第一段：丰川祥子 ===== -->
+<div class="container">
+    <div class="img-box">
+        <img src="77c6a7efce1b9d16fdfa5a0c7384a38f8c5494eece11.webp" alt="丰川祥子">
     </div>
+
+    <div class="content">
+        <h2>丰川祥子</h2>
+        <p>女，二次元少女乐队企划“BanG Dream!”中的角色。祥子是一名对音乐充满热情却经历乐队解散挫折的少女，她坚韧不拔地追求梦想，最终组建乐队Ave Mujica，以严格要求和不懈努力向主流音乐界迈进，同时也面临着家庭变故与个人情感的挑战。</p>
+    </div>
+</div>
+
+<!-- ===== 第二段：三角初华 ===== -->
+<div class="container">
+    <div class="img-box">
+        <img src="42a98226cffc1e178a82240901cbe103738da97743cd.webp" alt="三角初华">
+    </div>
+
+    <div class="content">
+        <h2>三角初华</h2>
+        <p>手机游戏《明日方舟》中的联动角色，五星辅助干员。出自电视动画片BanG Dream! Ave Mujica。Ave Mujica的主唱兼吉他手，既是Ave Mujica的成员，也是著名偶像组合sumimi的一员。拥有出众的个人魅力，爱好观星，总是把祥子挂在嘴边。</p>
+    </div>
+</div>
 
 </body>
 </html>
