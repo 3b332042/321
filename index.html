@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>魏廷哲的個人網站</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>互動式網頁</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Microsoft JhengHei", system-ui, sans-serif;
+            background-color: #ffb6c6;   /* 整體粉紅底色 */
+        }
+
+        /* 上方大標題區 */
+        header{
+            background-color: #ffc8d6;
+            padding: 30px 0;
+            text-align: center;
+        }
+        header h1{
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 4px;
+        }
+
+        /* 連結列 */
+        nav{
+            text-align: center;
+            margin: 15px 0 25px 0;
+        }
+        nav a{
+            margin: 0 15px;
+            text-decoration: none;
+            color: #5b2444;
+            font-weight: bold;
+        }
+        nav a:hover{
+            text-decoration: underline;
+        }
+
+        /* 內容區塊 */
+        .container{
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+        }
+
+        .flower{
+            border: 3px dotted #000;
+            padding: 15px;
+            margin-bottom: 40px;
+            background-color: #ffd9e6;       /* 預設底色 */
+            transition: background-color .3s;
+        }
+        /* 滑鼠移過去會改變背景顏色：互動效果 */
+        .flower:hover{
+            background-color: #ffe88a;
+        }
+
+        .flower h2{
+            margin-top: 0;
+        }
+
+        .flower img{
+            width: 100%;
+            max-width: 350px;
+            display: block;
+        }
+
+        .text{
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- 選單 -->
-  <nav>
-    <ul>
-      <li><a href="#home">首頁</a></li>
-      <li><a href="#about">關於我</a></li>
-      <li><a href="#contact">聯絡我</a></li>
-    </ul>
-  </nav>
+    <header>
+        <h1>互動式網頁</h1>
+    </header>
 
-  <!-- 主頁 -->
-  <section id="home">
-    <h1>歡迎來到魏廷哲的網站！</h1>
-    <p>這是一個簡單的介紹網頁，請瀏覽我的個人介紹！</p>
-  </section>
+    <nav>
+        <a href="#plumeria">雞蛋花</a>
+        <a href="#hydrangea">繡球花</a>
+    </nav>
 
-  <!-- 關於我 -->
-  <section id="about">
-    <h2>關於我</h2>
-    <p>大家好，我是魏廷哲，一名熱愛學習的網頁開發者。</p>
-    <p>我熱衷於創造美麗且實用的網站，並且喜歡探索新技術。</p>
-    <p>除了程式設計，我也喜歡閱讀、旅遊和攝影，這些興趣都讓我更具創造力！</p>
-  </section>
+    <div class="container">
 
-  <!-- 聯絡我 -->
-  <section id="contact">
-    <h2>聯絡我</h2>
-    <p>有任何問題，歡迎聯絡我：</p>
-    <ul>
-      <li>Email: weitingzhe@example.com</li>
-      <li>電話: 0987-654-321</li>
-    </ul>
-  </section>
+        <!-- 雞蛋花區塊 -->
+        <section id="plumeria" class="flower">
+            <h2>雞蛋花</h2>
+            <img src="eggflower.jpg" alt="雞蛋花照片">
+            <!-- 圖片請改成你自己檔名 -->
+            <p class="text">
+                雞蛋花是我非常喜歡的一種花，花瓣外白內黃，像半熟蛋一樣可愛。
+                每次看到雞蛋花就會想到夏天的味道，心情也會變得很放鬆。<br>
+                把滑鼠移到這個區塊上，可以看到背景顏色跟著改變，代表我看到雞蛋花時心情的轉變。
+            </p>
+        </section>
 
-  <!-- 頁尾 -->
-  <footer>
-    <p>© 2025 魏廷哲的網站</p>
-  </footer>
+        <!-- 繡球花區塊 -->
+        <section id="hydrangea" class="flower">
+            <h2>繡球花</h2>
+            <img src="hydrangea.jpg" alt="繡球花照片">
+            <p class="text">
+                繡球花一整球開滿小花，不同顏色代表不同的土壤與心情。
+                我喜歡在雨天走過繡球花步道，感覺世界變得很溫柔。<br>
+                一樣把滑鼠移過來，背景會變色，模擬繡球花顏色變化的感覺。
+            </p>
+        </section>
 
-  <script src="script.js"></script>
+    </div>
 
 </body>
 </html>
