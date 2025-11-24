@@ -2,19 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>DIO jojo</title>
-
 <style>
-    /* ★ 整體背景深粉色 */
     body {
         background-color: #ffabd3;
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        scroll-behavior: smooth; /* 錨點滑動效果 */
+        scroll-behavior: smooth;
     }
 
-    /* ★ 粉紅按鈕 */
     .pink-btn {
         width: 90%;
         max-width: 700px;
@@ -36,7 +32,6 @@
         border-color: #ff3b3b;
     }
 
-    /* ★ 連結區塊 */
     .links {
         text-align: center;
         margin-top: -10px;
@@ -47,22 +42,19 @@
         text-decoration: underline;
         font-size: 18px;
         font-weight: bold;
-        color: #fff;      /* 一開始是白色 */
+        color: #fff;
         transition: 0.2s;
         cursor: pointer;
     }
 
-    /* 滑鼠移過去 → 藍色 */
     .links a:hover {
         color: #4da3ff;
     }
 
-    /* 被點過的連結 → 永久藍色（靠 JS 加上 .clicked） */
     .links a.clicked {
         color: #4da3ff;
     }
 
-    /* ★ 角色排版 */
     .container {
         width: 100%;
         display: flex;
@@ -106,16 +98,13 @@
 
 <body>
 
-<!-- 上方按鈕 -->
 <div class="pink-btn">互動式網頁</div>
 
-<!-- 連結：點過會永久變藍 -->
 <div class="links">
     <a href="#xiangzi">豐川祥子</a>
     <a href="#ichika">三角初華</a>
 </div>
 
-<!-- ===== 第一段：丰川祥子 ===== -->
 <div class="container" id="xiangzi">
     <div class="img-box">
         <img src="77c6a7efce1b9d16fdfa5a0c7384a38f8c5494eece11.webp" alt="丰川祥子">
@@ -127,7 +116,6 @@
     </div>
 </div>
 
-<!-- ===== 第二段：三角初华 ===== -->
 <div class="container" id="ichika">
     <div class="img-box">
         <img src="42a98226cffc1e178a82240901cbe103738da97743cd.webp" alt="三角初华">
@@ -139,7 +127,6 @@
     </div>
 </div>
 
-<!-- ★ JS：讓點過的連結永久變藍 -->
 <script>
 document.querySelectorAll('.links a').forEach(link => {
     link.addEventListener('click', function() {
